@@ -8,18 +8,55 @@ document.addEventListener("DOMContentLoaded", function() {
     var counter = 0;
 
     removeFinishedTasksButton.addEventListener("click", function() {
-      var completeList = document.querySelectorAll(".complete");
+        var completeList = document.querySelectorAll(".complete");
 
-      for (var i = 0; i < completeList.length; i++) {
-        completeList[i].parentElement.removeChild(completeList[i]);
-        counter--;
-        span.innerHTML = "Things to do " + "counter";
-      }
+        for (var i = 0; i < completeList.length; i++) {
+            completeList[i].parentElement.removeChild(completeList[i]);
+            counter--;
+            span.innerHTML = "Things to do " + counter;
+        }
     });
 
     submitButton.addEventListener("click", function() {
-      var task = 
-    });
+        var task = placeholder.value;
 
+        if (task.length < 5 || task.length > 100) {
+            return;
+        }
+
+        var newLi = document.createElement("li");
+        var tempLi = taskList.appendChild(newLi);
+
+        var newH1 = document.createElement("h1");
+        newH1.innerHTML = task;
+
+        var thingDone = tempLi.appendChild(newH1);
+        var deleteButton = document.createElement("button");
+        deleteButton.innerHTML = "Delete";
+
+        var deleteBtn = tempLi.appendChild(deleteButton);
+
+        var completeButton = document.createElement("button");
+        completeButton.innerHTML = "Complete";
+
+        var completeBtn = tempLi.appendChild(completeButton);
+
+        counter++;
+
+        span.innerHTML = "Things to do " + counter;
+
+        placeholder.value = " ";
+
+        deleteBtn.addEventListener("click", function() {
+            this.parentElement.parentElement.removeChild(this.parentElement);
+            counter--;
+            span.innerHTML = "Things to do " + counter;
+        });
+
+        completeBtn.addEventListener("click", function() {
+            this.parentElement.classList.add("complete");
+        });
+
+    });
 
 });
