@@ -27,10 +27,10 @@ document.addEventListener("DOMContentLoaded", function() {
         var newLi = document.createElement("li");
         var tempLi = taskList.appendChild(newLi);
 
-        var newH1 = document.createElement("h1");
-        newH1.innerHTML = task;
+        var newH2 = document.createElement("h2");
+        newH2.innerHTML = task;
 
-        var thingDone = tempLi.appendChild(newH1);
+        var thingDone = tempLi.appendChild(newH2);
         var deleteButton = document.createElement("button");
         deleteButton.innerHTML = "Delete";
 
