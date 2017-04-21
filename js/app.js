@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
         for (var i = 0; i < completeList.length; i++) {
             completeList[i].parentElement.removeChild(completeList[i]);
             counter--;
-            span.innerHTML = "Things to do " + counter;
+            span.innerHTML = "Things to do: " + counter;
         }
     });
 
@@ -43,14 +43,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
         counter++;
 
-        span.innerHTML = "Things to do " + counter;
+        span.innerHTML = "Things to do: " + counter;
 
         placeholder.value = " ";
 
         deleteBtn.addEventListener("click", function() {
             this.parentElement.parentElement.removeChild(this.parentElement);
             counter--;
-            span.innerHTML = "Things to do " + counter;
+            span.innerHTML = "Things to do: " + counter;
         });
 
         completeBtn.addEventListener("click", function() {

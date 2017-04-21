@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #3EBBB3;
+  background-color: #B2DBBF;
   font-family: 'Poppins', sans-serif;
 }
 
@@ -16,15 +16,17 @@ section {
   flex-direction: column;
 }
 
+h1, h2, span {
+  color: #247BA0;
+}
+
 h1 {
   margin: 30px;
-  color: #113231;
 }
 
 h2 {
   font-family: 'Architects Daughter', cursive;
   margin: 10px;
-  color: #113231;
 }
 
 span {
@@ -34,19 +36,20 @@ span {
 input {
 width: 400px;
 height: 40px;
-border: #3EBBB3;
+border: #B2DBBF;
 padding: 5px;
+background-color: #F3FFBD;
 }
 
 button {
 margin: 10px;
 width: 150px;
 height: 25px;
-border: #113231;
-background-color: #113231;
-color: lightgrey;
+border: #247BA0;
+background-color: #247BA0;
+color: #F3FFBD;
 }
 
 .complete h2 {
-  color: #6F2536;
+  color: #FF1654;
 }
